@@ -66,7 +66,7 @@ public class View extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e){
-        int panjang, lebar, tinggi;
+        double p, l, t;
 
         if (e.getSource() == btnHitung) {
             if (tfPanjang.getText().isEmpty()) {
@@ -80,11 +80,11 @@ public class View extends JFrame implements ActionListener {
             }
             else {
                 try {
-                    panjang = Integer.parseInt(tfPanjang.getText());
-                    lebar = Integer.parseInt(tfLebar.getText());
-                    tinggi = Integer.parseInt(tfTinggi.getText());
+                    p = Integer.parseInt(tfPanjang.getText());
+                    l = Integer.parseInt(tfLebar.getText());
+                    t = Integer.parseInt(tfTinggi.getText());
 
-                    Balok balok = new Balok(panjang, lebar, tinggi);
+                    Balok balok = new Balok(p, l, t);
                     lLuas.setText("Luas Persegi Panjang             : " + balok.luas());
                     lKeliling.setText("Keliling Persegi Panjang        : " + balok.keliling());
                     lLuasPermukaan.setText("Luas Permukaan Balok           : " + balok.luasPermukaan());

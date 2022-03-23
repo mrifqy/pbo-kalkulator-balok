@@ -1,27 +1,27 @@
 package Bidang;
 
 public class PersegiPanjang implements InterfaceBidang{
-    public int p;
-    public int l;
+    public double p;
+    public double l;
 
-    public PersegiPanjang(int p, int l) {
+    public PersegiPanjang(double p, double l) {
         this.p = p;
         this.l = l;
     }
 
-    public void setP(int p) {
+    public void setP(double p) {
         this.p = p;
     }
 
-    public void setLebar(int l) {
+    public void setLebar(double l) {
         this.l = l;
     }
 
-    public int getP() {
+    public double getP() {
         return p;
     }
 
-    public int getLebar() {
+    public double getLebar() {
         return l;
     }
 

@@ -2,13 +2,17 @@ package Ruang;
 
 import Bidang.PersegiPanjang;
 public class Balok extends PersegiPanjang implements InterfaceRuang{
-    private int t;
+    private double t;
 
-    public int getT() {
+    public double getT() {
         return t;
     }
 
-    public Balok(int t, int p, int l) {
+    public void setT(double t) {
+        this.t = t;
+    }
+
+    public Balok(double t, double p, double l) {
         super(p, l);
         this.t = t;
     }
@@ -20,14 +24,12 @@ public class Balok extends PersegiPanjang implements InterfaceRuang{
 
     @Override
     public double luasPermukaan() {
-        int p, l, t;
+        double p, l, t;
         p = this.p;
         l = this.l;
         t = this.t;
         return 2*((p*l)+(p*t)+(l*t)) ;
     }
 
-    public void setT(int t) {
-        this.t = t;
-    }
+
 }
